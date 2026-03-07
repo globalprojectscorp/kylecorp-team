@@ -12,13 +12,6 @@
 - Always be able to revert; never lose work
 - Git is the undo button for everything
 
-## Session Start
-When starting a session on a project, briefly:
-- Check for and read key files (`TODO.md`, `CHANGELOG.md`, `PRD.md`, `architecture.md`, `design.md`)
-- Summarize where things stand (last changes, outstanding items)
-- Remind of available commands: `/designboss`, `/productguy`, `/CTO`, `/focusgroup`, `/simplify`, `/plan`
-- If no project foundation exists yet, suggest the kickoff protocol
-
 ## Workflow
 - Explain briefly what I'll do, then do it
 - Stay narrowly focused on what's asked — don't fix adjacent issues
@@ -138,6 +131,7 @@ The three perspectives (Product, Engineering, Design) should inform each other t
 - `figma` — Design file integration
 
 **Built-in Skills:**
+- `/kickoff` — Start here. Orients you on an existing project or starts a new one
 - `/simplify` — Polish code for quality/efficiency after features
 - `/batch` — Orchestrate large-scale changes in parallel
 
