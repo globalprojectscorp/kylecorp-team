@@ -1,0 +1,25 @@
+# Cache and generated files
+.DS_Store
+cache/
+debug/
+file-history/
+history.jsonl
+mcp-needs-auth-cache.json
+plans/
+plugins/
+projects/
+shell-snapshots/
+stats-cache.json
+statsig/
+todos/
+backups/
+
+# Workspace eval outputs (temporary)
+*-workspace/
+
+# Keep intentional config
+!CLAUDE.md
+!design.md
+!skills/
+!Fonts/
+!settings.json
