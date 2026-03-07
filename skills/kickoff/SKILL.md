@@ -79,7 +79,7 @@ Once confirmed, create everything:
 Commit everything as the foundation checkpoint.
 
 #### Step 5: Plan
-Transition into `/plan` to map out the implementation approach. Ask: "Foundation is set. Want to map out the implementation plan?"
+Automatically transition into `/plan` to map out the implementation approach. Don't ask — just do it. Say "Foundation is set. Let's plan the implementation." and enter plan mode.
 
 ---
 
