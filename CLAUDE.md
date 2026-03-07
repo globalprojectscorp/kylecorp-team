@@ -63,6 +63,9 @@ Organize by date, grouped by type of change:
 ```markdown
 ## YYYY-MM-DD
 
+### Decisions
+- Planning-level changes: scope shifts, feature promotions, direction pivots (with context on why)
+
 ### Added
 - New features
 
@@ -73,6 +76,11 @@ Organize by date, grouped by type of change:
 - Bug fixes
 ```
 Reference commits inline when useful: `(abc123)`. Add version tags when shipping releases.
+
+### Doc Update Rule
+**Implementation includes doc updates.** When implementing changes from `/conferencecall`, `/plan`, or any decision that alters product direction, update the relevant planning docs (PRD.md, architecture.md, design.md) as part of the same implementation work. Add a `### Decisions` section to CHANGELOG.md capturing what changed at the planning level.
+
+The review skills (`/conferencecall`, `/designboss`, `/productguy`, `/CTO`) should be catching *quality issues* — not stale documentation. If a review's main finding is "your docs are outdated," that means the implementer forgot to update them.
 
 ## Code Style
 - No rigid style rules — prioritize readability and functional clarity
