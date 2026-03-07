@@ -81,6 +81,9 @@ Commit everything as the foundation checkpoint.
 #### Step 5: Plan
 Automatically transition into `/plan` to map out the implementation approach. Don't ask — just do it. Say "Foundation is set. Let's plan the implementation." and enter plan mode.
 
+#### Step 6: Implementation
+Once the plan is confirmed, decompose the work into parallel tasks and use `/batch` or spawn multiple agents to start implementation. Default to a swarm approach — break the plan into independent units of work and run them concurrently. Brief the user: "Plan is locked. Spinning up agents to start building." Show what each agent is working on.
+
 ---
 
 ### 2C. Partial Setup
