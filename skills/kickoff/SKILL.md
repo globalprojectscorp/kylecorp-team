@@ -66,7 +66,8 @@ Wait for confirmation.
 #### Step 3: Build the Foundation
 Once confirmed, create everything:
 
-1. `git init` (if not already initialized)
+1. Create a project directory with a clear, kebab-case name derived from the project description (e.g., `recipe-tracker`, `portfolio-site`). `cd` into it.
+2. `git init`
 2. `PRD.md` — Product requirements from the discovery interview
 3. `architecture.md` — High-level technical approach (propose based on what was discussed, note open questions)
 4. `design.md` — Project-specific design decisions (inherit from `~/.claude/design.md`, extend based on the project's needs)
