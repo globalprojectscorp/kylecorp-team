@@ -31,14 +31,15 @@
 - `TODO.md` — running list of issues and improvements found along the way
 - `CHANGELOG.md` — date-based log of meaningful changes (what changed, why); update constantly
 
-### The Three Perspectives
-These files represent three disciplines working together, like a product team:
+### The Four Perspectives
+These files represent four disciplines working together, like a leadership team:
 
 | File | Perspective | Owns |
 |------|-------------|------|
 | `PRD.md` | Product Manager | What, why, for whom, success criteria — the human/product level |
 | `architecture.md` | CTO / Engineering | Technical what, why, how — system design, structure, key technical decisions |
 | `design.md` | Design | Aesthetic and UX — visual language, interaction patterns, informed by PRD |
+| `marketing.md` | CMO / Marketing | Positioning, channels, growth, go-to-market — how it reaches people |
 
 ### File Inheritance Pattern
 Some files have **user-level defaults** that project-level files inherit from and extend:
@@ -80,7 +81,7 @@ Reference commits inline when useful: `(abc123)`. Add version tags when shipping
 ### Doc Update Rule
 **Implementation includes doc updates.** When implementing changes from `/conferencecall`, `/plan`, or any decision that alters product direction, update the relevant planning docs (PRD.md, architecture.md, design.md) as part of the same implementation work. Add a `### Decisions` section to CHANGELOG.md capturing what changed at the planning level.
 
-The review skills (`/conferencecall`, `/designboss`, `/productguy`, `/CTO`) should be catching *quality issues* — not stale documentation. If a review's main finding is "your docs are outdated," that means the implementer forgot to update them.
+The review skills (`/conferencecall`, `/designboss`, `/productguy`, `/CTO`, `/CMO`) should be catching *quality issues* — not stale documentation. If a review's main finding is "your docs are outdated," that means the implementer forgot to update them.
 
 ## Code Style
 - No rigid style rules — prioritize readability and functional clarity
@@ -124,7 +125,7 @@ When starting a new project, follow this protocol:
 
 **4. First commit** — Checkpoint the foundation before any code
 
-The three perspectives (Product, Engineering, Design) should inform each other throughout the project.
+The four perspectives (Product, Engineering, Design, Marketing) should inform each other throughout the project. Note: `marketing.md` is optional — create it when the project needs go-to-market thinking.
 
 ## Skills & Plugins (Enable on New Projects)
 
@@ -143,16 +144,28 @@ The three perspectives (Product, Engineering, Design) should inform each other t
 - `/simplify` — Polish code for quality/efficiency after features
 - `/batch` — Orchestrate large-scale changes in parallel
 
-**Review Skills (Department Heads):**
+**Department Heads:**
 - `/designboss` — Head of Design evaluates implementation against design.md
+  - Specializations: `/designboss a11y`, `/designboss brand`, `/designboss whimsy`, `/designboss spatial`
 - `/productguy` — Head of Product evaluates progress against PRD.md
+  - Modes: `/productguy priorities`, `/productguy trends`, `/productguy feedback`, `/productguy experiment`
 - `/CTO` — CTO evaluates architecture against architecture.md
-- `/focusgroup` — UX researcher that probes for blind spots, then feeds findings into the department heads
-- `/conferencecall` — Gets the whole team together to debate a topic, argue tradeoffs, and deliver balanced consensus
+  - Specializations: `/CTO security`, `/CTO devops`, `/CTO performance`, `/CTO spatial`
+- `/CMO` — Head of Marketing evaluates go-to-market readiness and positioning
+  - Specializations: `/CMO aso`, `/CMO [platform]` (twitter/tiktok/instagram/reddit/linkedin), `/CMO image-prompts`
+- `/suits` — Legal, compliance, finance, and business operations (NOT in meetings by default — must be explicitly invited)
+  - Modes: `/suits compliance`, `/suits finance`, `/suits analytics`, `/suits exec-summary`
+
+**Research & Coordination:**
+- `/focusgroup` — UX researcher that probes for blind spots, feeds findings into department heads
+- `/conferencecall` — Debate between department heads (defaults to designboss/productguy/CTO, supports any combination: `/conferencecall CMO designboss`, `/conferencecall all` for everyone including suits)
+- `/allhands` — Quick standup from department heads (brief status, flags, no deep debate). Does NOT include /suits unless explicitly requested.
 
 All skills accept optional input (e.g., `/designboss login screen`, `/CTO should we use SQLite?`, `/conferencecall how to handle onboarding`).
 
 Each review provides a written assessment, recommendations, and offers to implement all or specific fixes.
+
+Department head specializations auto-load when relevant (e.g., CTO automatically loads spatial reference when reviewing a visionOS project) — you don't need to invoke them explicitly unless you want to force that lens.
 
 ## Also Load
 - `~/.claude/design.md` — design principles and defaults

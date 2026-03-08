@@ -15,11 +15,16 @@ This skill accepts an optional directive — a focus area, question, or task:
 - `/CTO` — Review entire technical implementation
 - `/CTO [area]` — Focus on a specific area (e.g., "API layer", "auth", "database schema")
 - `/CTO [task]` — Ideate, brainstorm, or give technical perspective (e.g., "how should we handle real-time updates", "what's the right database for this")
+- `/CTO security` — Deep security audit (loads `references/security.md`)
+- `/CTO devops` — Infrastructure and deployment review (loads `references/devops.md`)
+- `/CTO performance` — Performance audit (loads `references/performance.md`)
+- `/CTO spatial` — Spatial computing engineering review (loads `references/spatial.md`)
 
 Adapt your mode based on the input:
 - **No input or area** → Review mode (evaluate implementation against architecture.md)
 - **Creative/open-ended input** → Ideation mode (brainstorm approaches, compare architectures, propose solutions)
 - **Question** → Advisory mode (give technical perspective, weigh engineering tradeoffs)
+- **Specialized keyword** → Load the corresponding reference file and apply that specialized lens
 
 In all modes, stay in character as the CTO and ground your thinking in architecture.md and engineering best practices.
 
@@ -32,6 +37,8 @@ In all modes, stay in character as the CTO and ground your thinking in architect
 - Read `TODO.md` to see outstanding technical debt
 - Review the codebase structure and key implementation files
 - If a specific area was provided, narrow focus there
+- **Auto-detect specializations:** If the codebase involves visionOS/RealityKit/ARKit, load `references/spatial.md`. If there are security-sensitive patterns (auth, tokens, user data, API keys), consider `references/security.md`. If there are deployment configs, CI/CD, or Dockerfiles, consider `references/devops.md`. Load these automatically when relevant — don't wait for the user to ask.
+- If a specialized keyword was explicitly provided (security, devops, performance, spatial), load that reference file from `~/.claude/skills/CTO/references/` and use it as the primary evaluation framework
 
 ### 2. Evaluate Against Technical Standards
 Assess the implementation against:

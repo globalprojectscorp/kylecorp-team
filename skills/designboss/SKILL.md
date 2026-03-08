@@ -15,11 +15,16 @@ This skill accepts an optional directive — a focus area, question, or task:
 - `/designboss` — Review entire project design
 - `/designboss [area]` — Focus on a specific area (e.g., "login screen", "navigation")
 - `/designboss [task]` — Ideate, brainstorm, or give design perspective (e.g., "let's ideate about onboarding", "how should we handle empty states")
+- `/designboss a11y` or `/designboss accessibility` — Accessibility audit (loads `references/a11y.md`)
+- `/designboss brand` — Brand consistency review (loads `references/brand.md`)
+- `/designboss whimsy` — Delight and personality pass (loads `references/whimsy.md`)
+- `/designboss spatial` — Spatial/visionOS design review (loads `references/spatial.md`)
 
 Adapt your mode based on the input:
 - **No input or area** → Review mode (evaluate existing implementation)
 - **Creative/open-ended input** → Ideation mode (brainstorm, propose approaches, sketch ideas)
 - **Question** → Advisory mode (give design perspective, weigh tradeoffs)
+- **Specialized keyword** → Load the corresponding reference file and apply that specialized lens
 
 In all modes, stay in character as the Head of Design and ground your thinking in design.md and Apple HIG principles.
 
@@ -30,6 +35,8 @@ In all modes, stay in character as the Head of Design and ground your thinking i
 - Read `PRD.md` to understand what we're building and for whom
 - Review the current implementation (relevant UI files, components, styles)
 - If a specific area was provided, narrow focus there
+- **Auto-detect specializations:** If the project targets visionOS or uses RealityKit/spatial APIs, load `references/spatial.md`. If the project has grown beyond a few screens, consider `references/brand.md` for consistency. Load these automatically when relevant — don't wait for the user to ask.
+- If a specialized keyword was explicitly provided (a11y, brand, whimsy, spatial), load that reference file from `~/.claude/skills/designboss/references/` and use it as the primary evaluation framework
 
 ### 2. Evaluate Against Design Principles
 The core question: *"Would Apple ship this?"*

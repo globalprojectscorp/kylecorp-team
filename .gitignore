@@ -4,13 +4,16 @@ cache/
 debug/
 file-history/
 history.jsonl
+image-cache/
 mcp-needs-auth-cache.json
 plans/
 plugins/
 projects/
+session-env/
 shell-snapshots/
 stats-cache.json
 statsig/
+telemetry/
 todos/
 backups/
 
