@@ -79,9 +79,18 @@ Organize by date, grouped by type of change:
 Reference commits inline when useful: `(abc123)`. Add version tags when shipping releases.
 
 ### Doc Update Rule
-**Implementation includes doc updates.** When implementing changes from `/conferencecall`, `/plan`, or any decision that alters product direction, update the relevant planning docs (PRD.md, architecture.md, design.md) as part of the same implementation work. Add a `### Decisions` section to CHANGELOG.md capturing what changed at the planning level.
+**Department heads own their documents.** Do NOT unilaterally update `architecture.md`, `design.md`, `PRD.md`, or `marketing.md` during implementation. These documents represent the judgment of their respective department heads, not just a factual record.
 
-The review skills (`/conferencecall`, `/designboss`, `/productguy`, `/CTO`, `/CMO`) should be catching *quality issues* — not stale documentation. If a review's main finding is "your docs are outdated," that means the implementer forgot to update them.
+When implementation changes something a doc covers:
+1. **Flag it** — "This changes the auth architecture — `architecture.md` is now out of date."
+2. **Offer to convene** — "Want me to run `/CTO` to review and update `architecture.md`?"
+3. **Let the department head update their doc** — they decide what's captured and how.
+
+**Exception:** When a department head is already involved (e.g., `/CTO` recommended the change and you're implementing it), they update their doc as part of that work.
+
+**Always update:** `CHANGELOG.md` and `TODO.md` are shared documents — update these freely during implementation. Add a `### Decisions` section to CHANGELOG.md when decisions alter product direction.
+
+The review skills (`/conferencecall`, `/designboss`, `/productguy`, `/CTO`, `/CMO`) should be catching *quality issues* — not stale documentation. If a review's main finding is "your docs are outdated," that means the implementer didn't flag the drift.
 
 ## Code Style
 - No rigid style rules — prioritize readability and functional clarity
