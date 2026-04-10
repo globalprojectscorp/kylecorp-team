@@ -26,3 +26,10 @@ backups/
 !skills/
 !Fonts/
 !settings.json
+# Local-only files (credentials, sessions, cache)
+.credentials.json
+Fonts/
+sessions/
+tasks/
+paste-cache/
+skills/testflight/SKILL.md
