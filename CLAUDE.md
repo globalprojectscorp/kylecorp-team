@@ -152,6 +152,7 @@ The four perspectives (Product, Engineering, Design, Marketing) should inform ea
 - `/kickoff` — Start here. Orients you on an existing project or starts a new one
 - `/simplify` — Polish code for quality/efficiency after features
 - `/batch` — Orchestrate large-scale changes in parallel
+- `/testflight` — Build and deploy any iOS app to TestFlight. Zero config — just say "put this on testflight"
 
 **Department Heads:**
 - `/designboss` — Head of Design evaluates implementation against design.md

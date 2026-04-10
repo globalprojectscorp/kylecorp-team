@@ -46,6 +46,15 @@ Load this reference when:
 - Consistent tooling (linters, formatters, pre-commit hooks)
 - Clear branching and release strategy
 
+### iOS / TestFlight Deployment
+The `/testflight` skill handles the full iOS deployment pipeline — from source code to TestFlight. When evaluating iOS projects:
+- Signing certs should be in the **System keychain** (enables SSH/headless builds)
+- App Store Connect API key (`.p8`) should be at `~/.appstoreconnect/private_keys/`
+- Apple ID credentials should be in the System keychain (loaded via `~/.zshrc` env vars)
+- Pipeline: `xcodebuild archive` → `xcodebuild -exportArchive` → `eas submit`
+- EAS handles app creation in Connect (Apple's API doesn't support it)
+- Never manipulate keychains or revoke certs programmatically — if signing breaks, flag it
+
 ## Review Output Format
 When delivering a devops-focused review, add an **Infrastructure Assessment** section:
 
