@@ -51,15 +51,33 @@ The shift is subtle but fundamental: instead of managing tasks, you're **managin
 
 ### Bring in one head to work a problem
 
+Every head accepts freeform input — a question, a problem description, a focus area. You're not limited to one-word specializations. Describe the actual problem and the head will apply their functional lens to solve it.
+
+**Specialization keywords** load deep reference material on a topic:
 ```
 /CTO security          → Deep security audit with STRIDE threat modeling
-/designboss whimsy     → Evaluate personality and delight (includes microcopy library)
-/productguy priorities → What should we build next, ranked by user value
+/designboss a11y       → Accessibility audit with WCAG checklist
 /CMO aso               → App Store Optimization deep dive
-/suits compliance      → GDPR/CCPA regulatory risk assessment
 ```
 
-Each head stays in character — grounded in their discipline, opinionated, specific. They all accept optional input to focus their review on a specific area or question.
+**Describe a problem** and the head works it from their perspective:
+```
+/CTO should we use SQLite or Core Data for offline sync?
+/designboss the onboarding flow feels clunky, users are dropping off at step 3
+/productguy we have 4 features planned but only time for 2, help me prioritize
+/CMO we're launching next month, what's the go-to-market plan?
+/suits we're storing health data, what are the compliance implications?
+```
+
+**Ask for implementation** and the head will do it through their lens:
+```
+/CTO refactor the auth layer to support OAuth
+/designboss redesign the settings screen to match our design system
+/productguy write user stories for the notifications feature
+/CMO write the App Store listing copy
+```
+
+Each head stays in character — grounded in their discipline, opinionated, specific. They read the project's source-of-truth documents before responding, so their advice is always grounded in what the team has already decided.
 
 ### Conference call — cross-functional debate
 
