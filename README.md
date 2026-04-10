@@ -303,6 +303,3 @@ Then just say "put this on testflight" and the skill handles everything.
 
 ---
 
-## Lineage
-
-Inspired by [agency-agents](https://github.com/msitarzewski/agency-agents) (61 standalone AI agent personas). This system absorbs ~35 of those agents' capabilities but takes a different architectural approach: fewer heads with depth via progressive-loading reference files, organized like a real leadership team rather than a roster of specialists.
