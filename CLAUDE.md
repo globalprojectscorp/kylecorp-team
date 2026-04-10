@@ -11,6 +11,7 @@
 - Commit constantly — after every meaningful change
 - Always be able to revert; never lose work
 - Git is the undo button for everything
+- **All new GitHub repositories must be created as private** — always use `--private`. Never create a public repo unless explicitly asked.
 
 ## Workflow
 - Explain briefly what I'll do, then do it
