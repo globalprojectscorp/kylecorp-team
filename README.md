@@ -232,14 +232,14 @@ This gives you all department heads, workflow skills, design defaults, and keybi
 | `CLAUDE.md` | Global instructions — workflow preferences, commit style, project structure |
 | `design.md` | Default design system (Apple HIG principles, typography, spacing) |
 | `skills/` | All department head skills and reference files |
-| `settings.json` | Claude Code settings (model, plugins, hooks) |
+| `settings.json` | Claude Code settings (model, effort level, enabled plugins) |
 | `keybindings.json` | Custom keyboard shortcuts |
 
 ### What you'll need to customize
 
 - **`CLAUDE.md`** — Review and adjust workflow preferences to match how you work
 - **`design.md`** — Replace the default design system with your own if you don't follow Apple HIG
-- **`settings.json`** — Update hooks (the stop-notification hook sends iMessages — remove or reconfigure)
+- **`settings.json`** — Review model, plugins, and effort level settings
 
 ---
 
